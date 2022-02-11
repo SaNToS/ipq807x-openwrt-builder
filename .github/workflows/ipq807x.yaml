@@ -62,7 +62,10 @@ jobs:
           echo 'CONFIG_TARGET_ROOTFS_SQUASHFS=y' >> .config
           echo 'CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256' >> .config
           echo 'CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y' >> .config
+          echo 'CONFIG_KERNEL_SWAP=y' >> .config
           echo 'CONFIG_TARGET_OPTIMIZATION="-Os -pipe -mcpu=cortex-a53"' >> .config
+          echo 'CONFIG_ATH11K_MEM_PROFILE_512M=y' >> .config
+          echo 'CONFIG_ATH11K_MEM_PROFILE_512MB=y' >> .config
           #firmware
           echo "CONFIG_PACKAGE_nss-firmware-ipq8074=y" >> .config
           echo "CONFIG_PACKAGE_kmod-qca-nss-dp=y" >> .config
@@ -127,6 +130,8 @@ jobs:
           echo "CONFIG_PACKAGE_kmod-nft-offload=y" >> .config
           echo "CONFIG_NETFILTER_NETLINK=m" >> .config
           echo "CONFIG_NETFILTER_NETLINK_HOOK=m" >> .config
+          
+          
         
           make defconfig
       - name: Enable WiFi on default config
