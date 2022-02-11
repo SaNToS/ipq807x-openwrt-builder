@@ -111,6 +111,11 @@ jobs:
           echo "CONFIG_PACKAGE_luci-app-wireguard=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-ddns=y" >> .config
           echo "CONFIG_PACKAGE_less=n" >> .config
+          echo "CONFIG_DEFAULT_luci-app-turboacc=y" >> .config
+          echo "CONFIG_PACKAGE_luci-app-turboacc=y >> .config
+          echo "CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE_DRV=y >> .config
+          echo "CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_BBR_CCA=y >> .config
+          echo "CONFIG_PACKAGE_kmod-tcp-bbr=y >> .config
           # firewall4
           echo "CONFIG_IPTABLES_NFTABLES=y" >> .config
           echo "CONFIG_PACKAGE_firewall=n" >> .config
